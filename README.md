@@ -1,6 +1,6 @@
 ###Best phonebook evarrr
 
-You can do things like add, change, lookup, and remove entries from your the phonebook.
+You can do things like add, change, lookup, and remove entries from your phonebook.
 
 ##Instructions
 
