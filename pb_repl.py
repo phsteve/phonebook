@@ -1,9 +1,11 @@
 import sys
 import phonebook as pb
+import pb_db
 
 class REPL:
     def __init__(self):
-        self.book = pb.Phonebook() #TODO: add database
+        self.db = pb_db.DB()
+        self.book = pb_db.Phonebook(self.db)
         self.valid_commands = {'retrieve': self.book.retrieve, 'add': self.book.add, 'change': self.book.change, 'lookup': self.book.lookup,
                                'remove': self.book.remove, 'help': self.help, 'exit': self.exit}
         self.expected_arg_len = {'retrieve': 1, 'add': 2, 'change': 2, 'lookup': 1, 'remove': 1, 'help':0, 'exit': 0}
